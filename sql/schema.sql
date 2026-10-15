@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS student_lab;
+USE student_lab;
+CREATE TABLE IF NOT EXISTS students (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  student_id VARCHAR(40) NOT NULL,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  department VARCHAR(80) NOT NULL
+);
