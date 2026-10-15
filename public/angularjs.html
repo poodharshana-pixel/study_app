@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="studentApp"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AngularJS Students</title><link rel="stylesheet" href="style.css"><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script></head>
+<body ng-controller="StudentController"><main class="container"><h1>AngularJS Student Registration</h1>
+<form ng-submit="addStudent()">
+<label>Student ID</label><input ng-model="student.studentId" required>
+<label>Name</label><input ng-model="student.name" required>
+<label>Email</label><input type="email" ng-model="student.email" required>
+<label>Department</label><select ng-model="student.department" required><option value="">Choose</option><option>IT</option><option>CSE</option><option>ECE</option></select>
+<div class="actions"><button type="submit">Register</button></div></form><p>{{message}}</p><h2>Students</h2>
+<table><tr><th>ID</th><th>Name</th><th>Email</th><th>Department</th></tr><tr ng-repeat="s in students"><td>{{s.studentId}}</td><td>{{s.name}}</td><td>{{s.email}}</td><td>{{s.department}}</td></tr></table></main>
+<script>var app=angular.module("studentApp",[]);app.controller("StudentController",function($scope){$scope.student={};$scope.students=[];$scope.message="";$scope.addStudent=function(){$scope.students.push(angular.copy($scope.student));$scope.student={};$scope.message="Student registered successfully!";};});</script></body></html>

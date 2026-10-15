@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>React Students</title><link rel="stylesheet" href="style.css"><script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script><script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script><script src="https://unpkg.com/@babel/standalone/babel.min.js"></script></head><body><div id="root"></div>
+<script type="text/babel">
+function App(){const [form,setForm]=React.useState({studentId:"",name:"",email:"",department:"IT"});const [students,setStudents]=React.useState([]);const [message,setMessage]=React.useState("");
+function change(e){setForm({...form,[e.target.name]:e.target.value});}
+function submit(e){e.preventDefault();setStudents([...students,form]);setMessage("Student registered successfully!");setForm({studentId:"",name:"",email:"",department:"IT"});}
+return <main className="container"><h1>React Student Registration</h1><form onSubmit={submit}><label>Student ID</label><input name="studentId" value={form.studentId} onChange={change} required/><label>Name</label><input name="name" value={form.name} onChange={change} required/><label>Email</label><input name="email" type="email" value={form.email} onChange={change} required/><label>Department</label><select name="department" value={form.department} onChange={change}><option>IT</option><option>CSE</option><option>ECE</option></select><div className="actions"><button type="submit">Register</button></div></form><p>{message}</p><h2>Students</h2><table><thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Department</th></tr></thead><tbody>{students.map((s,i)=><tr key={i}><td>{s.studentId}</td><td>{s.name}</td><td>{s.email}</td><td>{s.department}</td></tr>)}</tbody></table></main>}
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script></body></html>
