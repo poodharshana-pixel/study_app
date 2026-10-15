@@ -1,1 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM "employees.dtd">
+<?xml-stylesheet type="text/xsl" href="employees.xsl"?>
+<employees>
+  <employee id="E101"><name>Asha</name><department>IT</department><salary>35000</salary></employee>
+  <employee id="E102"><name>Rahul</name><department>HR</department><salary>32000</salary></employee>
+  <employee id="E103"><name>Meena</name><department>Finance</department><salary>40000</salary></employee>
+</employees>
+
+
 

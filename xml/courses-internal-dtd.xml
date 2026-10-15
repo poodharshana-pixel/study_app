@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE courses [
+  <!ELEMENT courses (course, course, course)>
+  <!ELEMENT course (course_code, course_name, reg_no?)>
+  <!ELEMENT course_code (#PCDATA)>
+  <!ELEMENT course_name (#PCDATA)>
+  <!ELEMENT reg_no (#PCDATA)>
+]>
+<courses>
+  <course><course_code>22IT550</course_code><course_name>Web Technologies</course_name><reg_no>IT001</reg_no></course>
+  <course><course_code>22IT510</course_code><course_name>DBMS</course_name></course>
+  <course><course_code>22IT520</course_code><course_name>Computer Networks</course_name><reg_no>IT003</reg_no></course>
+</courses>
