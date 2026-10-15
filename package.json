@@ -1,0 +1,18 @@
+{
+  "name": "student-registration-master",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "start:mongodb": "node server-mongodb.js",
+    "start:mysql": "node server-mysql.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.12.0",
+    "mongoose": "^9.11.2",
+    "mysql2": "^3.12.0"
+  }
+}
